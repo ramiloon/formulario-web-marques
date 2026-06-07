@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Contacto Soporte Técnico</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Soporte Técnico - Formulario</h2>
+        
+        <div id="mensaje-exito" class="oculto"></div>
+
+        <form id="miFormulario" novalidate>
+            
+            <div class="grupo">
+                <label for="nombre">Nombre Completo *</label>
+                <input type="text" id="nombre" required minlength="3">
+                <span class="error" id="error-nombre"></span>
+            </div>
+
+            <div class="grupo">
+                <label for="correo">Correo Electrónico *</label>
+                <input type="email" id="correo" required>
+                <span class="error" id="error-correo"></span>
+            </div>
+
+            <div class="grupo">
+                <label for="IdCliente">Número de Cliente (100 a 999) *</label>
+                <input type="number" id="IdCliente" required min="100" max="999">
+                <span class="error" id="error-id"></span>
+            </div>
+
+            <div class="grupo">
+                <label for="fecha">Fecha del Incidente *</label>
+                <input type="date" id="fecha" required>
+                <span class="error" id="error-fecha"></span>
+            </div>
+
+            <div class="grupo">
+                <label for="prioridad">Prioridad del Problema *</label>
+                <select id="prioridad" required>
+                    <option value="">-- Selecciona --</option>
+                    <option value="baja">Baja (Duda)</option>
+                    <option value="alta">Alta (Error del sistema)</option>
+                </select>
+                <span class="error" id="error-prioridad"></span>
+            </div>
+
+            <div class="grupo">
+                <label for="mensaje">Detalles del problema *</label>
+                <textarea id="mensaje" required></textarea>
+                <span class="error" id="error-mensaje"></span>
+            </div>
+
+            <button type="submit">Enviar Reporte</button>
+
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
